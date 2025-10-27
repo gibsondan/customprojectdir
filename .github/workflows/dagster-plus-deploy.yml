@@ -74,7 +74,7 @@ jobs:
         if: steps.prerun.outputs.result == 'pex-deploy'
         uses: dagster-io/dagster-cloud-action/actions/utils/dagster-cloud-cli@v1.11.16
         with:
-          command: "ci build --build-strategy=python-executable --build-directory project_repo --python-version ${{ env.PYTHON_VERSION }}  --pex-deps-cache-from='${{ github.repository }}' --pex-deps-cache-to='${{ github.repository }}'"
+          command: "ci build --build-strategy=python-executable --build-directory project-repo --python-version ${{ env.PYTHON_VERSION }}  --pex-deps-cache-from='${{ github.repository }}' --pex-deps-cache-to='${{ github.repository }}'"
 
 
       # Otherwise, enable buildx for caching and build the Docker image
